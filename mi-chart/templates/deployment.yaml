@@ -30,3 +30,16 @@ spec:
             limits:
               cpu: "1000m"
               memory: "1500Mi"
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: route-{{ .Values.name }}
+spec:
+  to:
+    kind: Service
+    name: service-{{ .Values.name }}
+  port:
+    targetPort: http
+  tls:
+    termination: edge
