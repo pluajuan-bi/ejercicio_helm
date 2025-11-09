@@ -1,3 +1,10 @@
+name: my-app
+
+# Kubernetes namespace to install into (can be overridden)
+namespace: adonis-paz-dev
+
+replicaCount: 1
+
 container:
   image: "juangrp/shadcn-datatable-practica"
   tag: "20"
