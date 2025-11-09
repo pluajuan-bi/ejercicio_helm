@@ -38,5 +38,5 @@ jobs:
           cat ./mi-chart/Chart.yaml
           helm package ./mi-chart
  
-          helm push ./mi-chart-${{ github.run_number }}.tgz oci://registry-1.docker.io/adonispaz9506
+          helm push ./mi-chart-${{ github.run_number }}.tgz oci://registry-1.docker.io/juangrp
  
