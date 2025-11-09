@@ -1,7 +1,7 @@
 name: deployment-shadcn-data-table-helm
 
 # Kubernetes namespace to install into (can be overridden)
-namespace: adonis-paz-dev
+namespace: pluaj-dev-dev
 
 replicaCount: 1
 
