@@ -1,9 +1,12 @@
-name: my-app
+name: deployment-shadcn-data-table-helm
 
 # Kubernetes namespace to install into (can be overridden)
 namespace: adonis-paz-dev
 
 replicaCount: 1
+
+labels:
+  app: mi-app-dt-helm
 
 container:
   image: "juangrp/shadcn-datatable-practica"

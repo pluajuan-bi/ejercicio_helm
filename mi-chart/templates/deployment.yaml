@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment-shadcn-data-table-helm
-  namespace: pluaj-dev-dev
+  name: {{ .Values.name }}
+  namespace: {{ .Values.namespace }}
   labels:
-    app: mi-app-dt-helm
+    app: {{ .Values.labels.app }}
     areanegocio: tecnologia
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: mi-app-dt-helm
+      app: {{ .Values.labels.app }}
   template:
     metadata:
       labels:
-        app: mi-app-dt-helm
+        app: {{ .Values.labels.app }}
     spec:
       containers:
         - name: container-shadcn-data-table
-          image: juangrp/shadcn-datatable-practica:build-{{ .Values.container.tag }}   # Ajusta si subes a Docker Hub
+          image: {{ .Values.container.image }}:build-{{ .Values.container.tag }}
           imagePullPolicy: Always
           ports:
             - name: http
