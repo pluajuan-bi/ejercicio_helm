@@ -1,4 +1,4 @@
-name: deployment-shadcn-data-table-helm
+name: shadcn-data-table-helm
 
 # Kubernetes namespace to install into (can be overridden)
 namespace: pluaj-dev-dev
