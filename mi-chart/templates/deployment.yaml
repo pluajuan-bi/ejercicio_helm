@@ -18,11 +18,11 @@ spec:
     spec:
       containers:
         - name: container-shadcn-data-table
-          image: juangrp/shadcn-datatable-practica:build-20   # Ajusta si subes a Docker Hub
+          image: juangrp/shadcn-datatable-practica:build-{{ .Values.container.tag }}   # Ajusta si subes a Docker Hub
           imagePullPolicy: Always
           ports:
             - name: http
-              containerPort: 3000
+              containerPort: {{ .Values.container.port }}
           resources:
             requests:
               cpu: "500m"
